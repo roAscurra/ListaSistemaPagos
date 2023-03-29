@@ -9,6 +9,20 @@
     <title>Lista</title>
 </head>
 <body>
-    
+    <div>    
+        <button id="boton" onclick="location.reload()" class="btn">Refrescar Datos</button>
+    </div>
+    <table id="tabla" class="table table-striped mt-5">
+        <thead>
+            <tr>
+                <th id="vclaro" class="text-center">Nombre</th>
+                <th id="voscuro" class="text-center">Transacción</th>
+                <th id="vclaro" class="text-center">Tipo de Caja</th>
+                <th id="voscuro"class="text-center">Cantidad a Despositar</th>
+                <th id="vclaro" class="text-center">Equivalente usdt</th>
+            </tr>
+        </thead>
+        <tbody id="lista"></tbody>
+    </table>
 </body>
 </html>
