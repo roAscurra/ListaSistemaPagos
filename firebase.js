@@ -19,3 +19,33 @@ const app = initializeApp(firebaseConfig);
 
 
 const db = getDatabase();
+
+export const getPagos = () =>{
+    const contenedodr = document.getElementById("lista")
+    let html = '';
+
+    const dbRef = ref(db);
+    
+    get(child(dbRef, `Pagos/`)).then((snapshot) => {
+      snapshot.forEach(doc => {
+          console.log(doc.val());
+            html += `
+              <table class="table table-striped mt-5">
+                  <thead >
+                      <tr>
+                          <td id="vclaro" class="text-center">${doc.val().Nombre}</td>
+                          <td id="voscuro" class="text-center">${doc.val().transaccion}</td>
+                          <td id="vclaro" class="text-center">${doc.val().Caja}</td>
+                          <td id="voscuro"class="text-center">${doc.val().Monto}</td>
+                          <td id="vclaro" class="text-center">${doc.val().USDT}</td>
+                      </tr>
+                  </thead>
+              </table>    
+              `
+              contenedodr.innerHTML=html;
+      });
+    }).catch((error) => {
+      console.error(error);
+    });
+    
+  }
