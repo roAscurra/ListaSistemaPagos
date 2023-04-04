@@ -36,7 +36,7 @@ export const getPagos = () =>{
                           <td id="vclaro" class="text-center">${doc.val().Nombre}</td>
                           <td id="voscuro" class="text-center">${doc.val().transaccion}</td>
                           <td id="vclaro" class="text-center">${doc.val().Caja}</td>
-                          <td id="voscuro"class="text-center">${doc.val().Monto}</td>
+                          <td id="voscuro"class="text-center">ARS ${doc.val().Monto}</td>
                           <td id="vclaro" class="text-center">${doc.val().USDT}</td>
                       </tr>
                   </thead>
