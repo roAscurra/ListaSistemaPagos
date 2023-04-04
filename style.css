@@ -4,3 +4,12 @@
 #voscuro{
     background-color: #bdbdbd;
 }
+div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1%;
+}
+#boton{
+    background-color: #bdbdbd;
+}
