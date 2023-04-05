@@ -4,8 +4,9 @@ body{
 #vclaro{
     background-color: #e0e0e0;
 }
-#voscuro{
-    background-color: #bdbdbd;
+#campos{
+    background-color: #616161;
+    color: #fff;
 }
 div{
     display: flex;
@@ -14,5 +15,15 @@ div{
     padding-top: 1%;
 }
 #boton{
-    background-color: #bdbdbd;
+    background-color: #616161;
+    color: #fff;
+}
+#empresa{
+    background-color:  #C7E3E4;
+}
+#inmueble{
+    background-color: #F6D0A1;
+}
+#pais{
+    background-color:  #D3E1BD;
 }

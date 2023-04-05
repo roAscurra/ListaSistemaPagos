@@ -29,20 +29,55 @@ export const getPagos = () =>{
     get(child(dbRef, `Pagos/`)).then((snapshot) => {
       snapshot.forEach(doc => {
           console.log(doc.val());
+          if(doc.val().Caja=="Caja Empresa"){
             html += `
               <table class="table table-striped mt-5">
                   <thead >
-                      <tr>
-                          <td id="vclaro" class="text-center">${doc.val().Nombre}</td>
-                          <td id="voscuro" class="text-center">${doc.val().transaccion}</td>
-                          <td id="vclaro" class="text-center">${doc.val().Caja}</td>
-                          <td id="voscuro"class="text-center">ARS ${doc.val().Monto}</td>
-                          <td id="vclaro" class="text-center">${doc.val().USDT}</td>
+                      <tr id="empresa">
+                          <td class="text-center">${doc.val().Nombre}</td>
+                          <td class="text-center">${doc.val().transaccion}</td>
+                          <td class="text-center">${doc.val().Caja}</td>
+                          <td class="text-center">ARS ${doc.val().Monto}</td>
+                          <td class="text-center">${doc.val().USDT}</td>
                       </tr>
                   </thead>
               </table>    
               `
               contenedodr.innerHTML=html;
+            }
+            if(doc.val().Caja=="Caja Inmueble"){
+              html += `
+                <table class="table table-striped mt-5">
+                    <thead >
+                        <tr id="inmueble">
+                            <td class="text-center">${doc.val().Nombre}</td>
+                            <td class="text-center">${doc.val().transaccion}</td>
+                            <td class="text-center">${doc.val().Caja}</td>
+                            <td class="text-center">ARS ${doc.val().Monto}</td>
+                            <td class="text-center">${doc.val().USDT}</td>
+                        </tr>
+                    </thead>
+                </table>    
+                `
+                contenedodr.innerHTML=html;
+              }
+              if(doc.val().Caja=="Caja País"){
+                html += `
+                  <table class="table mt-5">
+                      <thead >
+                          <tr id="pais">
+                              <td class="text-center">${doc.val().Nombre}</td>
+                              <td class="text-center">${doc.val().transaccion}</td>
+                              <td class="text-center">${doc.val().Caja}</td>
+                              <td class="text-center">ARS ${doc.val().Monto}</td>
+                              <td class="text-center">${doc.val().USDT}</td>
+                          </tr>
+                      </thead>
+                  </table>    
+                  `
+                  contenedodr.innerHTML=html;
+                }
+
       });
     }).catch((error) => {
       console.error(error);
