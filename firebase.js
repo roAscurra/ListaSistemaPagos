@@ -7,13 +7,13 @@ import { getDatabase, ref, child, get } from "https://www.gstatic.com/firebasejs
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD6OJiibt1H7db0GoTH7em3CcC_qb7rZ28",
-  authDomain: "pagos-e4592.firebaseapp.com",
-  projectId: "pagos-e4592",
-  storageBucket: "pagos-e4592.appspot.com",
-  messagingSenderId: "246023860637",
-  appId: "1:246023860637:web:cf875c017c3afb5bdfff74",
-  measurementId: "G-Z2WHSCHL5R"
+  apiKey: "xxxxxxxxxxxxxxxxxxxxxxx",
+  authDomain: "xxxxxxxxxx",
+  projectId: "xxxxxxxxx",
+  storageBucket: "xxxxxxxxxx",
+  messagingSenderId: "xxxxxxxxxxxxx",
+  appId: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  measurementId: "xxxxxxxxx"
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
